@@ -1,0 +1,310 @@
+/* UTILS */
+ul {
+    list-style: none;
+}
+
+[class*="col-"] {
+    padding: 8px;
+}
+
+.row {
+    margin-top: 1.5rem;
+}
+
+
+/* BODY */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* TOP-CONTENT */
+.top-content{
+    height: 90vh;
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width: 220px;
+    background-color: black;
+    color: #6E6E6E;
+    font-weight: bold;
+}
+
+.sidebar .big-logo{
+    width: 150px;
+    margin: 20px;
+}
+
+.sidebar .small-logo{
+    width: 30px;
+    margin-left: 20px;
+    display: none;
+}
+
+.sidebar nav{
+    margin-left: 20px;
+}
+
+.sidebar nav img{
+    width: 25px;
+}
+
+
+.sidebar nav span{
+    margin-left: 10px;
+    font-size: 0.9rem;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.sidebar nav span:hover{
+    color: white;
+}
+
+.sidebar nav .home{
+    color: white;
+}
+
+.sidebar .playlist{
+    margin-left: 20px;
+}
+
+.sidebar .playlist h3{
+    color: white;
+    margin-top: 1rem;
+}
+
+.sidebar .playlist ul li{
+    margin: 15px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.sidebar .playlist ul li:hover{
+    color: white;
+}
+
+.sidebar .user .download-app{
+    padding-bottom: 15px;
+    border-bottom: 2px solid gray;
+    margin-right: 20px;
+    font-size: 0.8rem;
+}
+
+.sidebar .user .download-app img{
+    width: 0.9rem;
+    margin-right: 10px;
+}
+
+.sidebar .user .download-app:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar .user .profile img{
+    width: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.sidebar .user .profile .name-user{
+    color: white;
+    font-weight: bold;
+}
+
+/* CONTENT */
+.content{
+    width: calc(100% - 220px);
+    overflow: auto;
+}
+
+/* HEADER */
+header{
+    height: 80px;
+    width: calc(100% - 240px);
+    position: fixed;
+    background-color: #080B12;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 85%;
+}
+
+header .btn-upgrade{
+    color: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+header .btn-upgrade:hover{
+    scale: 1.1;
+}
+
+/* MAIN */
+main{
+    padding-top: 100px;
+    background-color: #141922;
+}
+
+main .category {
+    justify-content: center;
+}
+
+main .category ul{
+    text-align: center;
+}
+
+main .category ul li{
+    display: inline-block;
+    color: #6E6E6E;
+    font-weight: bold;
+    margin: 0 .7rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.category ul li:hover {
+    color: white
+}
+
+main h2{
+    color: white;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+    margin-left: 17px;
+}
+
+main .card .image{
+    position: relative;
+}
+
+main .card:hover .image>img{
+    background-color: black;
+    opacity: 40%;
+}
+
+
+main .card i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5rem;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+main .card:hover i{
+    display: block;
+
+}
+
+main .card h4{
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
+main .card .subtitle{
+    color: #6E6E6E;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+main p{
+    color: #6E6E6E;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 17px;
+    margin-top: .5rem;
+}
+
+main .card .img-circle img{
+    border-radius: 50%;
+}
+
+
+
+/* FOOTER */
+footer{
+    height: 10vh;
+    background-color:#282828;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .title img{
+    width: 50px;
+    margin-left: 10px;
+}
+
+footer .title .details{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+footer .title .name-artist{
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+footer .title .name-song{
+    color: #6E6E6E;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+footer .title .name-song:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+footer .title .icon-title{
+    color: #6E6E6E;
+    margin-left: 2rem;
+    margin-top: 20px;
+}
+
+footer .title .icon-title i{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+footer .title .icon-title i:hover{
+    color: white;
+}
+
+footer .player .icon-player i{
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+footer .player .icon-player :nth-child(3){
+    font-size: 1.7rem;
+}
+
+footer .player .icon-player :nth-child(3):hover {
+    scale: 1.1;
+}
+
+footer .volume i{
+    color: white;
+}
+
+@media screen and (max-width: 600px){
+    
+}
+
+
