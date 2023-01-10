@@ -35,7 +35,8 @@ body{
 
 .sidebar .big-logo{
     width: 150px;
-    margin: 20px;
+    height: 100px;
+    margin-left: 20px;
 }
 
 .sidebar .small-logo{
@@ -65,8 +66,17 @@ body{
 }
 
 .sidebar nav .home{
+    height: 30px;
     color: white;
     border-left: 2px solid hsl(84deg 100% 59%);
+}
+
+.sidebar nav .search{
+    height: 30px;
+}
+
+.sidebar nav .library {
+    height: 30px;
 }
 
 .sidebar .playlist{
@@ -75,8 +85,14 @@ body{
 
 .sidebar .playlist h3{
     color: white;
-    margin-top: 1rem;
-}
+    height: 40px;
+    padding-top: 20px;
+ }
+
+ .sidebar .playlist .crea-playlist{
+    height: 50px;
+    padding-top: 10px;
+ }
 
 .sidebar .playlist .crea-playlist:hover{
 color: white;
@@ -90,14 +106,15 @@ cursor: pointer;
 .sidebar .add-playlist{
     display: inline-block;
     text-align: center;
-    margin-top: 10px;
     font-size: 2rem;
     width: 36px;
     background-color: #6E6E6E;
     color: black;
 }
 
-.sidebar ul{
+.sidebar .playlist ul{
+    height: calc(100vh - 100px - 30px - 30px - 30px - 40px - 50px - 90px - 80px);
+    min-height: 100px;
     max-height: 600px;
     overflow: auto;
 }
@@ -113,8 +130,11 @@ cursor: pointer;
 }
 
 .sidebar .user{
-    margin-top: auto;
     margin-left: 20px;
+    height: 90px;
+     display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .sidebar .user .download-app{
@@ -125,8 +145,12 @@ cursor: pointer;
 }
 
 .sidebar .user .download-app img{
-    width: 0.9rem;
+    width: 15px;
     margin-right: 10px;
+}
+
+.sidebar .user .download-app .inst-app{
+    display: inline-block;
 }
 
 .sidebar .user .download-app:hover{
@@ -169,6 +193,7 @@ header{
     justify-content: flex-end;
     align-items: center;
     opacity: 85%;
+    z-index: 2;
 }
 
 header .btn-upgrade{
@@ -288,7 +313,7 @@ footer{
     background-color:#282828;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    position: relative;
 }
 
 footer .title img{
@@ -457,11 +482,36 @@ footer .progress-volum:hover::after{
         width: 50px;
     }
 
+    .sidebar .user{
+        margin-top: auto;
+        margin-left: 10px;
+    }
+
     .sidebar .user .profile img{
         width: 30px;
         height:30px;
     }
+
+    .sidebar .user .profile .name-user{
+        display: none;
+    }
+
+    .sidebar .user .download-app{
+        border: none;
+        margin-right: 12px;
+    }
+
     
+
+    .sidebar .user .download-app .inst-app{
+        display: none;
+    }
+
+    .sidebar .user .download-app img {
+        width: 30px;
+        margin-right:0;
+    }
+
     .sidebar .small-logo{
         display: block;
         margin-left: 10px;
@@ -477,7 +527,6 @@ footer .progress-volum:hover::after{
          border-left: none
     }
 
-
     /* CONTENT */
     .content {
          width: calc(100% - 50px);        
@@ -486,6 +535,16 @@ footer .progress-volum:hover::after{
     /* HEADER */
     header{
         width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer .player .icon-player i {
+            margin: 0 3px;
+        }
+
+    footer .title img{
+        display: none;
     }
 }
 
