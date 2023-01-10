@@ -50,8 +50,8 @@ body{
 
 .sidebar nav img{
     width: 25px;
+    cursor: pointer;
 }
-
 
 .sidebar nav span{
     margin-left: 10px;
@@ -112,7 +112,6 @@ cursor: pointer;
     color: white;
 }
 
-
 .sidebar .user{
     margin-top: auto;
     margin-left: 20px;
@@ -153,11 +152,13 @@ cursor: pointer;
     margin-left: 5px;
 }
 
+
 /* CONTENT */
 .content{
     width: calc(100% - 220px);
     overflow: auto;
 }
+
 
 /* HEADER */
 header{
@@ -184,7 +185,9 @@ header .btn-upgrade:hover{
     scale: 1.1;
 }
 
+
 /* MAIN */
+
 main{
     padding-top: 100px;
     background-color: #141922;
@@ -235,7 +238,6 @@ main .card:hover .image>img{
     opacity: 40%;
 }
 
-
 main .card i{
     position: absolute;
     top: 50%;
@@ -249,7 +251,6 @@ main .card i{
 
 main .card:hover i{
     display: block;
-
 }
 
 main .card h4{
@@ -280,8 +281,8 @@ main .card .img-circle img{
 }
 
 
-
 /* FOOTER */
+
 footer{
     height: 80px;
     background-color:#282828;
@@ -312,6 +313,7 @@ footer .title .name-song{
     font-weight: bold;
     cursor: pointer;
 }
+
 footer .title .name-song:hover{
     color: white;
     text-decoration: underline;
@@ -372,7 +374,6 @@ footer .progressive-bar-container .song-minute{
     font-weight: bold;
     line-height: 4px;
     color: white;
-
 }
 
 footer .progressive-bar .progress{
@@ -387,9 +388,10 @@ footer .progressive-bar-container:hover .progress{
     background-color: green;
 }
 
+
 footer .progress::after{
     content: "";
-    display: block;
+    display: none;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -399,11 +401,13 @@ footer .progress::after{
     right: 0;   
 }
 
+footer .progressive-bar-container:hover .progress::after{
+    display: block;
+}
 
 footer .volume i{
     color: white;
     margin: 5px;
-    
 }
 
 footer .volume .volum-bar{
@@ -430,7 +434,7 @@ footer .volume .volum-bar:hover .progress-volum{
 
 footer .progress-volum::after {
     content: "";
-    display: block;
+    display: none;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -440,7 +444,9 @@ footer .progress-volum::after {
     right: 0;
 }
 
-
+footer .progress-volum:hover::after{
+    display: block;
+}
 
 /* MEDIA */
 
