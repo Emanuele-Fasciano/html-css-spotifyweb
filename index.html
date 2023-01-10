@@ -7,6 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Spotify</title>
 	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+	
+	<!-- link font -->
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap');
+	</style>
 
 	<!-- link fontawesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -20,7 +25,7 @@
 
 <body>
 	<div class="top-content">
-		<div class="sidebar">
+		<div class="sidebar d-flex">
 				<img class="big-logo d-none-sm" src="img/logo.svg" alt="">
 				<img class="small-logo" src="./img/logo-small.svg" alt="">
 			<nav>
@@ -40,7 +45,7 @@
 			<div class="playlist d-none-sm">
 				<h3>PLAYLIST</h3>
 				<div class="crea-playlist">
-					<i class="fa-solid fa-plus"></i>
+					<span class="add-playlist">+</span>
 					<span>Crea playlist</span>
 				</div>
 				<ul>
@@ -52,15 +57,15 @@
 					<li>Nome Playlist</li>
 					<li>Nome Playlist</li>
 				</ul>
-				<div class="user">
-					<div class="download-app d-flex ai-center">
-						<img src="./img/download.svg" alt="">
-						<span>Installa app</span>
-					</div>
-					<div class="profile">
-						<img src="./img/profile.svg" alt="">
-						<span class="name-user">John Doe</span>
-					</div>
+			</div>
+			<div class="user">
+				<div class="download-app d-flex ai-center d-none-sm">
+					<img class="d-block-sm" src="./img/download.svg" alt="">
+					<span>Installa app</span>
+				</div>
+				<div class="profile d-flex ai-center">
+					<img src="./img/profile.svg" alt="">
+					<span class="name-user d-none-sm">John Doe</span>
 				</div>
 			</div>
 		</div>
@@ -71,7 +76,9 @@
 			<main>
 				<div class="category d-flex">
 					<ul>
-						<li>IN EVIDENZA</li>
+						<li>IN EVIDENZA
+							<div class="green-bar"></div>
+						</li>
 						<li>PODCAST</li>
 						<li>CLASSIFICHE</li>
 						<li>GEGERI E MOOD</li>
@@ -148,13 +155,13 @@
 				<p>Più ascolti, più accurati saranno i suggerimenti.</p>
 				<div class="container">
 					<div class="row">
-						<div class="col-2 col-md-3">
+						<div class="col-2 col-md-3 col-sm-6">
 							<div class="card">
 								<img src="./img/radar.jpeg" alt="">
 								<h4>Release Radar</h4>
 							</div>
 						</div>
-						<div class="col-2 col-md-3">
+						<div class="col-2 col-md-3 col-sm-6">
 							<div class="card">
 								<img src="./img/mixdaily.jpeg" alt="">
 								<h4>Daily Mix 1</h4>
@@ -165,21 +172,21 @@
 				<p>Più ascolti, più accurati saranno i suggerimenti.</p>
 				<div class="container">
 					<div class="row">
-						<div class="col-2 col-md-3">
+						<div class="col-2 col-md-3 col-sm-6">
 							<div class="card">
 								<div class="img-circle">
 									<img src="./img/youg.jpeg" alt="">
 								</div>
-								<h4>Release Radar</h4>
+								<h4>Lana del Ray</h4>
 							</div>
 						</div>
-						<div class="col-2 col-md-3">
+						<div class="col-2 col-md-3 col-sm-6">
 							<div class="card">
 								<div class="img-circle">
 
 									<img src="./img/einaudi.jpeg" alt="">
 								</div>
-								<h4>Daily Mix 1</h4>
+								<h4>Ludovico Einaudi</h4>
 							</div>
 						</div>
 					</div>
@@ -193,7 +200,7 @@
 				<div class="name-artist">Sinister</div>
 				<div class="name-song">Brano nome</div>
 			</div>
-			<div class="icon-title">
+			<div class="icon-title d-none-md">
 				<i class="fa-regular fa-heart"></i>
 				<i class="fa-regular fa-folder"></i>
 			</div>
@@ -206,12 +213,22 @@
 				<i class="fa-solid fa-forward-step"></i>
 				<i class="fa-solid fa-arrow-rotate-right"></i>
 			</div>
+			<div class="progressive-bar-container d-flex ai-center">
+				<div class="song-minute">0:25</div>
+				<div class="progressive-bar">
+					<span class="progress"></span>
+				</div>
+				<div class="song-minute">4:35</div>
+			</div>	
 		</div>
-		<div class="volume">
-			<i class="fa-solid fa-bars"></i>
-			<i class="fa-solid fa-desktop"></i>
-			<i class="fa-solid fa-volume-high"></i>
-		</div>
+			<div class="volume d-flex">
+				<i class="fa-solid fa-bars"></i>
+				<i class="fa-solid fa-desktop"></i>
+				<i class="fa-solid fa-volume-high"></i>
+				<div class="volum-bar d-none-sm">
+					<span class="progress-volum"></span>
+				</div>
+			</div>
 	</footer>
 </body>
 

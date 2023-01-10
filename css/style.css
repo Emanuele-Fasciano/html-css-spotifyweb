@@ -14,19 +14,20 @@ ul {
 
 /* BODY */
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
 /* TOP-CONTENT */
 .top-content{
-    height: 90vh;
+    height: calc(100vh - 80px);
     display: flex;
 }
 
 /* SIDEBAR */
 .sidebar{
     width: 220px;
+    flex-direction: column;
     background-color: black;
     color: #6E6E6E;
     font-weight: bold;
@@ -65,6 +66,7 @@ body{
 
 .sidebar nav .home{
     color: white;
+    border-left: 2px solid hsl(84deg 100% 59%);
 }
 
 .sidebar .playlist{
@@ -76,6 +78,30 @@ body{
     margin-top: 1rem;
 }
 
+.sidebar .playlist .crea-playlist:hover{
+color: white;
+cursor: pointer;
+}
+
+.sidebar .playlist .crea-playlist:hover .add-playlist{
+    background-color: white;
+}
+
+.sidebar .add-playlist{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2rem;
+    width: 36px;
+    background-color: #6E6E6E;
+    color: black;
+}
+
+.sidebar ul{
+    max-height: 600px;
+    overflow: auto;
+}
+
 .sidebar .playlist ul li{
     margin: 15px 0;
     font-size: 0.9rem;
@@ -84,6 +110,12 @@ body{
 
 .sidebar .playlist ul li:hover{
     color: white;
+}
+
+
+.sidebar .user{
+    margin-top: auto;
+    margin-left: 20px;
 }
 
 .sidebar .user .download-app{
@@ -103,8 +135,12 @@ body{
     cursor: pointer;
 }
 
+.sidebar .user .profile{
+    margin: 10px 0;
+}
+
 .sidebar .user .profile img{
-    width: 30px;
+    max-width: 30px;
     background-color: gray;
     border-radius: 50%;
 }
@@ -112,6 +148,9 @@ body{
 .sidebar .user .profile .name-user{
     color: white;
     font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
 /* CONTENT */
@@ -123,7 +162,7 @@ body{
 /* HEADER */
 header{
     height: 80px;
-    width: calc(100% - 240px);
+    width: calc(100% - 220px);
     position: fixed;
     background-color: #080B12;
     justify-content: flex-end;
@@ -170,6 +209,13 @@ main .category ul li{
 
 .category ul li:hover {
     color: white
+}
+
+main .category .green-bar {
+    height: 2px;
+    width: 40%;
+    background-color: hsl(84deg 100% 59%);
+    margin: auto;
 }
 
 main h2{
@@ -237,10 +283,11 @@ main .card .img-circle img{
 
 /* FOOTER */
 footer{
-    height: 10vh;
+    height: 80px;
     background-color:#282828;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 }
 
 footer .title img{
@@ -285,6 +332,14 @@ footer .title .icon-title i:hover{
     color: white;
 }
 
+footer .player{
+    max-width: 50%;
+}
+
+footer .player .icon-player{
+    text-align: center;
+}
+
 footer .player .icon-player i{
     color: white;
     margin: 0 10px;
@@ -299,12 +354,133 @@ footer .player .icon-player :nth-child(3):hover {
     scale: 1.1;
 }
 
-footer .volume i{
-    color: white;
+footer .player .progressive-bar-container{
+    padding: 10px;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 600px){
+footer .progressive-bar{
+    width: 500px;
+    height: 4px;
+    background-color: hsl(0deg 0% 35%);
+    border-radius: 10px;
+    margin: 0 1.5rem;
+}
+
+footer .progressive-bar-container .song-minute{
+    font-size: 0.6rem;
+    font-weight: bold;
+    line-height: 4px;
+    color: white;
+
+}
+
+footer .progressive-bar .progress{
+    display: block;
+    height: 100%;
+    width: 30%;
+    background-color: hsl(0deg 0% 76%);
+    position: relative;
+}
+
+footer .progressive-bar-container:hover .progress{
+    background-color: green;
+}
+
+footer .progress::after{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -3px;
+    right: 0;   
+}
+
+
+footer .volume i{
+    color: white;
+    margin: 5px;
     
+}
+
+footer .volume .volum-bar{
+    width: 100px;
+    height: 4px;
+    background-color: hsl(0deg 0% 35%);
+    border-radius: 10px;
+    margin: 0 1.5rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+footer .volume .volum-bar .progress-volum{
+    display: block;
+    height: 100%;
+    width: 30%;
+    background-color: hsl(0deg 0% 76%);
+    position: relative;
+}
+
+footer .volume .volum-bar:hover .progress-volum{
+    background-color: green;
+}
+
+footer .progress-volum::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -3px;
+    right: 0;
+}
+
+
+
+/* MEDIA */
+
+@media screen and (max-width: 600px){
+   
+   /* SIDEBAR */
+    .sidebar{
+        width: 50px;
+    }
+
+    .sidebar .user .profile img{
+        width: 30px;
+        height:30px;
+    }
+    
+    .sidebar .small-logo{
+        display: block;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+     .sidebar nav{
+        margin-left: 10px;
+        
+     }
+
+    .sidebar nav .home {
+         border-left: none
+    }
+
+
+    /* CONTENT */
+    .content {
+         width: calc(100% - 50px);        
+    }
+
+    /* HEADER */
+    header{
+        width: calc(100% - 50px);
+    }
 }
 
 
