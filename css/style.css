@@ -254,6 +254,11 @@ main h2{
     margin-left: 17px;
 }
 
+main .row{
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
 main .card .image{
     position: relative;
 }
@@ -548,4 +553,14 @@ footer .progress-volum:hover::after{
     }
 }
 
+@media screen and (max-height: 300px) {
+    header{
+        background-color: #141922;;
+    }
 
+    header .btn-upgrade{
+        display: none;
+    }
+
+
+}
