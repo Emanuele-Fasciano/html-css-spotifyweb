@@ -45,12 +45,9 @@ body{
     display: none;
 }
 
-.sidebar nav{
-    margin-left: 20px;
-}
-
 .sidebar nav img{
     width: 25px;
+    margin-left: 20px;
     cursor: pointer;
 }
 
@@ -278,6 +275,7 @@ main .card i{
     display: none;
     cursor: pointer;
 }
+
 
 main .card:hover i{
     display: block;
